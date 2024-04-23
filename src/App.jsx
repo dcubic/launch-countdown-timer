@@ -1,13 +1,12 @@
 import styles from './App.module.css'
-import StarsBackground from './assets/images/bg-stars.svg?react'
 
-import Footer from './components/Footer.jsx';
+import Footer from './components/footer/Footer.jsx';
+import CountdownTimer from './components/countdown-timer/CountdownTimer.jsx';
 
 function App() {
-
   return (
     <div className={styles.container}>
-      <StarsBackground /> 
+      <CountdownTimer />
       <Footer />
     </div>
   )

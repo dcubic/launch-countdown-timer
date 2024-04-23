@@ -1,0 +1,18 @@
+.container {
+    width: 5rem;
+    height: 5rem;
+    z-index: 0;
+    background-color: var(--indigo);
+}
+
+.darkTransluscentOverlay {
+    z-index: 1;
+}
+
+.leftHalfCircle {
+    z-index: 2;
+}
+
+.rightHalfCircle {
+    z-index: 2;
+}

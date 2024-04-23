@@ -5,12 +5,17 @@
   font-size: 14px;
 
   --grayish-blue: hsl(237, 18%, 59%);
-  --soft-red: hsl(345, 95%, 68%);
+  --soft-red: #F95F85;
   --dark-desaturated-blue: hsl(236, 21%, 26%);
   --very-dark-blue: hsl(235, 16%, 14%);
   --black-blue: hsl(234, 17%, 12%);
+  --indigo: #34364F;
 }
 
 body, h1, p {
   margin: 0;
+}
+
+body {
+  overflow-x: hidden;
 }
