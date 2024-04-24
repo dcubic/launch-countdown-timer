@@ -26,7 +26,7 @@ export default function Footer() {
     return (
         <footer className={styles.container}>
             <div className={styles.linkContainer}>
-                {iconInformation.map(iconInfo => <Link Icon={iconInfo.icon} url={iconInfo.url} />)}
+                {iconInformation.map((iconInfo, index) => <Link key={index} Icon={iconInfo.icon} url={iconInfo.url} />)}
             </div>
         </footer>
     )

@@ -10,7 +10,7 @@ const hoursPerDay = 24;
 const secondsPerDay = hoursPerDay * secondsPerHour;
 const startDay = 14;
 const startDuration = startDay * secondsPerDay;
-// const startDuration = 1;
+// const startDuration = 10;
 
 export default function CountdownTimer() {
   const [remainingSeconds, setRemainingSeconds] = useState(startDuration);
@@ -30,9 +30,9 @@ export default function CountdownTimer() {
     };
   }, []);
 
-  const daysRemaining = remainingSeconds / secondsPerDay;
-  const hoursRemaining = (remainingSeconds / secondsPerHour) % hoursPerDay;
-  const minutesRemaining = (remainingSeconds / secondsPerMinute) % secondsPerMinute;
+  const daysRemaining = Math.floor(remainingSeconds / secondsPerDay);
+  const hoursRemaining = Math.floor(remainingSeconds / secondsPerHour) % hoursPerDay;
+  const minutesRemaining = Math.floor(remainingSeconds / secondsPerMinute) % secondsPerMinute;
   const secondsRemaining = remainingSeconds % secondsPerMinute;
 
   const timerIntervalInfo = [
@@ -44,17 +44,16 @@ export default function CountdownTimer() {
 
   return (
     <div className={styles.backgroundImage}>
-      <h1>We're launching soon</h1>
+      <h1 className={styles.header}>We're launching soon</h1>
       <div className={styles.timerContainer}>
         {timerIntervalInfo.map((timerInfo) => (
-          <div>
+          <div key={timerInfo.intervalName} className={styles.panelAndLabel}>
             <TimerPanel
               intervalName={timerInfo.intervalName}
               timeRemaining={timerInfo.timeRemaining}
             />
             <p>{timerInfo.intervalName}</p>
           </div>
-          
         ))}
       </div>
     </div>

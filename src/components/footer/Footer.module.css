@@ -7,6 +7,7 @@
     background-image: url('../../assets/images/pattern-hills.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: var(--night-sky);
 }
 
 .linkContainer {

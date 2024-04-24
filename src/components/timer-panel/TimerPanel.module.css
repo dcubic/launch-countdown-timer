@@ -1,18 +1,71 @@
 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     width: 5rem;
     height: 5rem;
     z-index: 0;
     background-color: var(--indigo);
+    color: #FA5F81;
+    font-size: 3rem;
+    font-weight: 700;
+    overflow: hidden;
+    border-radius: 0.25rem;
 }
 
 .darkTransluscentOverlay {
+    position: absolute;
     z-index: 1;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .leftHalfCircle {
-    z-index: 2;
+    left: -0.25rem;
 }
 
 .rightHalfCircle {
+    right: -0.25rem;
+}
+
+.leftHalfCircle, .rightHalfCircle {
     z-index: 2;
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--night-sky);
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        width: 7.5rem;
+        height: 7.5rem;
+        font-size: 4rem;
+    }
+    
+    .leftHalfCircle {
+        left: -0.5rem;
+    }
+
+    .rightHalfCircle {
+        right: -0.5rem;
+    }
+
+    .leftHalfCircle, .rightHalfCircle {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        width: 9rem;
+        height: 9rem;
+        font-size: 5rem;
+    }
 }
